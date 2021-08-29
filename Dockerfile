@@ -18,6 +18,7 @@ COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
 RUN pip install -r requirements.txt
 COPY . /app
-CMD ["gunicorn", "app:app"]
+CMD ["gunicorn"  , "-b", "0.0.0.0:8000", "app:app"]
+
 #COPY target/echoserver.jar /usr/src/app/
 #CMD "java -jar /usr/src/app/echoserver.jar"
