@@ -13,7 +13,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-               sh "docker build -t echo-server:v1 ."
+               script {
+                   def image = docker.build("")
+               }
             }
         }
     }
