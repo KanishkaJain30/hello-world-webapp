@@ -9,7 +9,7 @@
 # RUN pip install -r requirements.txt
 # COPY . /app
 # CMD [ "python", "./app.py" ]
-
+#docker-hub-push-credentials
 FROM openjdk:8
 WORKDIR /app
 COPY ./requirements.txt /app/requirements.txt
