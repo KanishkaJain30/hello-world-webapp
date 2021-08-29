@@ -12,6 +12,10 @@
 #docker-hub-push-credentials
 FROM openjdk:8
 WORKDIR /app
+ARG user=jenkins
+ARG group=jenkins
+ARG uid=1000
+ARG gid=1000
 COPY ./requirements.txt /app/requirements.txt
 COPY . /app
 CMD ["gunicorn", "app:app"]
